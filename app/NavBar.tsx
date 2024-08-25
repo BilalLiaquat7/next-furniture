@@ -9,26 +9,36 @@ const NavBar = () => {
     const currentPath = usePathname();
 
     const links= [
-        {label: 'Dashboard', href:'/'},
-        {label: 'Issues', href:'/issues'}
+        {label: 'Home', href:'/'},
+        {label: 'Boys Room', href:'/issues'},
+        {label: 'Girls Room', href:'/issues'},
+        {label: 'Sleep In Style', href:'/issues'},
+        {label: 'Stylish Storage', href:'/issues'}
     ]
 
   return (
-    <nav className='flex space-x-6 border-b mb-5 px-5 h-14 items-center'>
+    <div className='border-b'>
+    <nav className='text-white flex justify-between h-24 items-center mx-12'>
+        <span className="text-xl flex items-center font-bold text-slate-900 cursor-pointer hover:text-pink-600">
+          Techways
+        </span>
+        <div className='flex justify-end items-center'>
         <Link href='/'></Link>
         <ul className='flex space-x-6'>
             {
                 links.map((link) => 
                 <Link key={link.href}
                 className={classNames({
-                    'text-zinc-900': link.href === currentPath,
-                    'text-zinc-500': link.href !== currentPath,
-                    'hover:text-zinc-900 transition-colors': true
+                    'text-pink-600': link.href === currentPath,
+                    'text-zinc-900': link.href !== currentPath,
+                    'hover:text-pink-600 transition-colors': true
                 })} 
                 href={link.href}>{link.label}</Link>)
             }
         </ul>
+        </div>
     </nav>
+    </div>
   )
 }
 
