@@ -25,7 +25,7 @@ const NavBar = () => {
     ]
 
   return (
-    <div className='border-b flex justify-between p-6 items-center'>
+    <div className='border-b flex justify-between sticky p-6 items-center'>
       <GiHamburgerMenu onClick={()=> handleNav()} className='hover:cursor-pointer md:hidden'/>
       <div className='md:text-xl items-center font-bold text-slate-900 cursor-pointer hover:text-pink-600'>
         TECHWAYS
