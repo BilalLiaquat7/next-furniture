@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./NavBar";
 import Banner from "./Banner";
 import Footer from "./Footer";
+import FrequentlyAskedQuestions from "./FAQ";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBar/>
         <main>{children}</main>
+        <FrequentlyAskedQuestions/>
         <Footer/>
         </body>
     </html>
